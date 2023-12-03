@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('about', [\App\Http\Controllers\PageController::class, 'about']);
+
+Route::get('articles/{id}', [ArticleController::class, 'show'])
+    ->name('articles.show');
